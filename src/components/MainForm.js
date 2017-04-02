@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { css } from 'aphrodite/no-important'
-import mainForm from '../styles/mainForm'
 import { getPeople } from '../actions/user_actions'
 import { connect } from 'react-redux'
+import mainForm from '../styles/mainForm_styl'
 
 class MainForm extends Component {
   constructor() {

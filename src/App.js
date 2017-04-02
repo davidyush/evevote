@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom'
 
 import { css } from 'aphrodite/no-important'
-import app from './styles/app'
+import app from './styles/app_styl'
 
 import Header from './components/Header'
 import Home from './components/Home'

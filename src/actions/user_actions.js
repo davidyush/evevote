@@ -43,8 +43,13 @@ export function getPeople(name) {
 
     VK.Api.call('users.search', {q: name, fields: ['photo_200','city','country']}, (res) => {
       if(res) {
-        const users = res.response;
+        let users = res.response;
         users.shift();
+        users.forEach((person, index, arr) => {
+          if(!person.photo_200) {
+            arr.splice(index,1);
+          }
+        });
         dispatch({
           type: GET_PEOPLE_SUCCESS,
           payload: users

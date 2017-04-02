@@ -1,15 +1,17 @@
 import { StyleSheet } from 'aphrodite/no-important'
+import { green, grey, mainWidth } from './style_consts'
 
 const header = StyleSheet.create({
   header: {
     margin: 0,
+    marginBottom: '20px',
     padding: '15px 25px',
-    backgroundColor: '#0ca170',
-    color: '#ffffff',
+    backgroundColor: green,
+    color: grey,
     display: 'flex'
   },
   container: {
-    width: '1000px',
+    width: mainWidth,
     margin: '0 auto',
     display: 'flex',
     alignItems: 'center'
@@ -30,7 +32,7 @@ const header = StyleSheet.create({
     fontSize: '18px',
     marginRight: '20px',
     textDecoration: 'none',
-    color: '#ffffff'
+    color: grey
   },
   hoverLink: {
     ':hover': {

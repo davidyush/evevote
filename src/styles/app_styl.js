@@ -1,10 +1,10 @@
 import { StyleSheet } from 'aphrodite/no-important'
+import { mainWidth } from './style_consts'
 
 const app = StyleSheet.create({
   container: {
-    width: '1000px',
+    width: mainWidth,
     margin: '0 auto',
-    paddingTop: '30px',
     fontFamily: 'PT Sans'
   }
 });
