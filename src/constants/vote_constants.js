@@ -1,0 +1,2 @@
+export const COPY_PEOPLE = 'COPY_PEOPLE'
+export const GET_TWO_PERSONS = 'GET_TWO_PERSONS'

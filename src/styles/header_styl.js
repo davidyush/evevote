@@ -1,12 +1,12 @@
 import { StyleSheet } from 'aphrodite/no-important'
-import { green, grey, mainWidth } from './style_consts'
+import { mainColor, grey, mainWidth } from './style_consts'
 
 const header = StyleSheet.create({
   header: {
     margin: 0,
     marginBottom: '20px',
     padding: '15px 25px',
-    backgroundColor: green,
+    backgroundColor: mainColor,
     color: grey,
     display: 'flex'
   },

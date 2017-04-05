@@ -15,6 +15,9 @@ const Header = (props) => (
         <li>
           <Link className={css(header.hoverLink, header.navLink)} to='/'>Home</Link>
         </li>
+        <li>
+          <Link className={css(header.hoverLink, header.navLink)} to='/vote'>Vote</Link>
+        </li>
       </ul>
     </div>
   </header>

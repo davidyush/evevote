@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "aphrodite": "^1.2.0",
+    "normalize.css": "^6.0.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-redux": "^5.0.3",

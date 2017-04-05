@@ -1,5 +1,5 @@
 import { StyleSheet } from 'aphrodite/no-important'
-import { green, grey, greenHover, containerShadow } from './style_consts'
+import { mainColor, grey, greenHover, containerShadow } from './style_consts'
 
 const mainForm = StyleSheet.create({
   form: {
@@ -11,7 +11,7 @@ const mainForm = StyleSheet.create({
     boxShadow: containerShadow
   },
   input: {
-    border: `1px solid ${green}`,
+    border: `1px solid ${mainColor}`,
     borderRadius: '3px',
     padding: '6px 10px',
     width: '75%',
@@ -20,11 +20,11 @@ const mainForm = StyleSheet.create({
     transition: 'box-shadow .25s ease',
     ':focus': {
       outline: 'none',
-      boxShadow: `1px 1px 2px ${green}, -1px -1px 2px ${green}`
+      boxShadow: `1px 1px 2px ${mainColor}, -1px -1px 2px ${mainColor}`
     }
   },
   button: {
-    backgroundColor: green,
+    backgroundColor: mainColor,
     color: grey,
     border: 'none',
     borderRadius: '3px',

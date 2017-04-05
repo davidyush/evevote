@@ -1,16 +1,22 @@
 import { StyleSheet } from 'aphrodite/no-important'
-import { grey, green, containerShadow } from './style_consts'
+import { grey, mainColor, containerShadow } from './style_consts'
 
 const people = StyleSheet.create({
   container: {
+    boxShadow: containerShadow,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: '10px',
+    backgroundColor: grey
+  },
+  wrapper: {
     display: 'flex',
     flexWrap: 'wrap',
-    justifyContent: 'space-between',
-    backgroundColor: grey,
-    padding: '15px',
+    justifyContent: 'flex-start',
     borderRadius: '3px',
-    color: green,
-    boxShadow: containerShadow
+    color: mainColor,
+    maxWidth: '1060px'
   }
 });
 

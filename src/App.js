@@ -6,6 +6,7 @@ import app from './styles/app_styl'
 
 import Header from './components/Header'
 import Home from './components/Home'
+import Vote from './components/Vote'
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
           <Header/>
           <div className={css(app.container)}>
             <Route exact={true} path='/' component={Home}/>
+            <Route path='/vote' component={Vote}/>
           </div>
         </main>
       </BrowserRouter>
