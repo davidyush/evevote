@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { css } from 'aphrodite/no-important'
-import { getPeople } from '../actions/people_actions'
 import { connect } from 'react-redux'
+import { getPeople } from '../actions/people_actions'
+import { css } from 'aphrodite/no-important'
 import mainForm from '../styles/mainForm_styl'
 
 class MainForm extends Component {

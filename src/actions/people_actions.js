@@ -16,13 +16,17 @@ export function getPeople(name) {
 
     VK.Api.call('users.search', {q: name, fields: fields }, (res) => {
       if(res) {
-        let users = res.response;
-        users.shift();
-        users.forEach((person, index, arr) => {
+        let usersResponse = res.response;
+        usersResponse.shift();
+        usersResponse.forEach((person, index, arr) => {
           if(!person.photo_200 && !person.photo_50) {
             arr.splice(index,1);
           }
         });
+        // let users = usersResponse.map(user => {
+        //   return { ...user, wins: [], loses: [], count: 0 };
+        // });
+        let users = usersResponse;
         dispatch({
           type: GET_PEOPLE_SUCCESS,
           payload: users

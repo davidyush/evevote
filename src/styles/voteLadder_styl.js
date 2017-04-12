@@ -1,7 +1,7 @@
 import { StyleSheet } from 'aphrodite/no-important'
 import { green, red} from './style_consts'
 
-const ladderVote = StyleSheet.create({
+const voteLadder = StyleSheet.create({
   list: {
     listStyle: 'none',
     display: 'flex',
@@ -43,4 +43,4 @@ const ladderVote = StyleSheet.create({
   }
 });
 
-export default ladderVote;
+export default voteLadder;
