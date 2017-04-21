@@ -2,9 +2,20 @@ import React from 'react'
 import { css } from 'aphrodite/no-important'
 import voteLadder from '../styles/voteLadder_styl'
 
+function sorter(one, two) {
+  if(one.wins.length > two.wins.length) {
+    return -1;
+  } else if(one.wins.length <= two.wins.length && one.loses.length >= two.loses.length) {
+    return 1;
+  } else if(one.wins.length >= two.wins.length && one.loses.length <= two.loses.length) {
+    return -1;
+  }
+  return 0;
+}
+
 const VoteLadder = (props) => (
   <ul className={css(voteLadder.list)}>
-  { props.users.map(user => (
+  { props.users.sort(sorter).map(user => (
     <li className={css(voteLadder.item)} key={user.uid}>
       <img className={css(voteLadder.image)} alt={user.first_name} src={user.photo_50}/>
       <p>{user.first_name} {user.last_name}</p>

@@ -1,18 +1,13 @@
 export function getTwo(items, nameId) {
   const currentItems = [].concat(items);
   let result = [];
-  // result = doubleElemination(currentItems, nameId);
-  // if(!isSorted(currentItems)) {
-  //   result = firstStepPairs(currentItems);
-  //   result = getPair(currentItems);
-  //   if(isEmptyArray(result)) {
-  //     result = finalComparing(currentItems, nameId);
-  //   }
-  //   return result;
+  result = getPair(currentItems);
+  // if(isEmptyArray(result)) {
+  //   result = finalComparing(currentItems, nameId);
   // }
-  // return firstStepPairs(currentItems);
-  return [currentItems[0], currentItems[1]];
+  return result;
 }
+
 
 function isEven(arr) {
   return arr.length % 2 === 0;
@@ -44,11 +39,11 @@ function shouldBeCompared(el1, el2, nameId) {
          theSameLoses(el1, el2) && theSameCount(el1, el2);
 }
 
-function canCompare(movie1, movie2, nameId) {
-  if( movie1.wins.includes(movie2[nameId])  ||
-      movie2.wins.includes(movie1[nameId])  ||
-      movie1.loses.includes(movie2[nameId]) ||
-      movie2.loses.includes(movie1[nameId])
+function canCompare(item1, item2, nameId) {
+  if( item1.wins.includes(item2[nameId])  ||
+      item2.wins.includes(item1[nameId])  ||
+      item1.loses.includes(item2[nameId]) ||
+      item2.loses.includes(item1[nameId])
     ) {
     return false;
   }
@@ -58,14 +53,13 @@ function canCompare(movie1, movie2, nameId) {
 
 function getPair(arr) {
   let result = [];
-  arr.forEach(movie1 => {
-    arr.forEach(movie2 => {
-      if(result.length < 2 && isDifferent(movie1, movie2, 'uid') && canCompare(movie1, movie2, 'uid')) {
-        result.push(movie1, movie2);
+  arr.forEach(item1 => {
+    arr.forEach(item2 => {
+      if(result.length < 2 && canCompare(item1, item2, 'uid') && shouldBeCompared(item1, item2, 'uid')) {
+        result.push(item1, item2);
       }
     });
   });
-  console.log('result', result);
   return result;
 }
 
@@ -100,10 +94,10 @@ function doubleElemination(arr, nameId) {
 
 function finalComparing(arr, nameId) {
   let result = [];
-  arr.forEach(movie1 => {
-    arr.forEach(movie2 => {
-      if(result.length < 2 && isDifferent(movie1, movie2, nameId) && canCompare(movie1, movie2, nameId)) {
-        result.push(movie1, movie2);
+  arr.forEach(item1 => {
+    arr.forEach(item2 => {
+      if(result.length < 2 && isDifferent(item1, item2, nameId) && canCompare(item1, item2, nameId)) {
+        result.push(item1, item2);
       }
     })
   });

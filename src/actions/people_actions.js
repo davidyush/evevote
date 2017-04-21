@@ -11,7 +11,8 @@ const fields = ['photo_200','photo_50','city','country'];
 export function getPeople(name) {
   return function(dispatch) {
     dispatch({
-      type: GET_PEOPLE_REQUEST
+      type: GET_PEOPLE_REQUEST,
+      payload: name
     });
 
     VK.Api.call('users.search', {q: name, fields: fields }, (res) => {

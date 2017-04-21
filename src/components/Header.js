@@ -11,12 +11,14 @@ const Header = (props) => (
     <div className={css(header.container)}>
       <h1 className={css(header.logo)}>AVAVOTE</h1>
       <ul className={css(header.navLinks)}>
-        <li className={css(header.hoverLink, header.navLink)} onClick={props.handleLogin}>Login vk</li>
-        <li>
-          <Link className={css(header.hoverLink, header.navLink)} to='/'>Home</Link>
+        <li className={css(header.hoverLink, header.navLink)} onClick={props.handleLogin}>
+          Login vk
         </li>
-        <li>
-          <Link className={css(header.hoverLink, header.navLink)} to='/vote'>Vote</Link>
+        <li className={css(header.hoverLink, header.navLink)}>
+          <Link className={css(header.linkHead)} to='/'>Home</Link>
+        </li>
+        <li className={css(header.hoverLink, header.navLink)}>
+          <Link className={css(header.linkHead)} to='/vote'>Vote</Link>
         </li>
       </ul>
     </div>

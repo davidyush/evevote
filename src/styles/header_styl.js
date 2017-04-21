@@ -1,11 +1,11 @@
 import { StyleSheet } from 'aphrodite/no-important'
-import { mainColor, grey, mainWidth } from './style_consts'
+import { mainColor, grey, mainWidth, mainHover, headerHeight } from './style_consts'
 
 const header = StyleSheet.create({
   header: {
     margin: 0,
     marginBottom: '20px',
-    padding: '15px 25px',
+    padding: '0px 25px',
     backgroundColor: mainColor,
     color: grey,
     display: 'flex'
@@ -14,7 +14,8 @@ const header = StyleSheet.create({
     width: mainWidth,
     margin: '0 auto',
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
+    height: '100%'
   },
   logo: {
     margin: 0,
@@ -25,19 +26,26 @@ const header = StyleSheet.create({
     listStyle: 'none',
     fontFamily: 'PT Sans',
     display: 'flex',
-    flexDirection: 'row-reverse'
+    margin: '0',
+    height: headerHeight
   },
   navLink: {
     transition: 'all .2s ease-in-out',
     fontSize: '18px',
-    marginRight: '20px',
+    padding: '0px 20px',
+    width: '80px',
+    textAlign: 'center',
+    lineHeight: headerHeight
+  },
+  linkHead: {
     textDecoration: 'none',
     color: grey
   },
   hoverLink: {
     ':hover': {
       textShadow: '0px 1px 1px #222429',
-      cursor: 'pointer'
+      cursor: 'pointer',
+      backgroundColor: mainHover
     }
   }
 });

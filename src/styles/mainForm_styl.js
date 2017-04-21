@@ -1,5 +1,5 @@
 import { StyleSheet } from 'aphrodite/no-important'
-import { mainColor, grey, greenHover, containerShadow } from './style_consts'
+import { mainColor, grey, mainHover, containerShadow } from './style_consts'
 
 const mainForm = StyleSheet.create({
   form: {
@@ -34,7 +34,7 @@ const mainForm = StyleSheet.create({
     transition: 'background-color .25s ease',
     ':hover': {
       cursor: 'pointer',
-      backgroundColor: greenHover
+      backgroundColor: mainHover
     },
     ':focus': {
       outline: 'none'

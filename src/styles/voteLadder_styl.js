@@ -13,7 +13,8 @@ const voteLadder = StyleSheet.create({
   item: {
     display: 'flex',
     justifyContent: 'space-between',
-    marginBottom: '10px'
+    marginBottom: '10px',
+    transition: 'all .3s ease'
   },
   image: {
     borderRadius: '50%',
@@ -30,14 +31,14 @@ const voteLadder = StyleSheet.create({
     width: '25px',
     height: '25px',
     lineHeight: '25px',
-    backgroundColor: green,
+    backgroundColor: red,
     color: 'white',
     fontSize: '14px',
     textAlign: 'center',
     margin: '0',
     ':first-child': {
       marginRight: '5px',
-      backgroundColor: red
+      backgroundColor: green
     }
 
   }
