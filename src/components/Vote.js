@@ -9,10 +9,11 @@ import VoteGame from './VoteGame'
 
 class Vote extends Component {
   componentDidMount() {
-    let users = this.props.vkUsers.map(user => {
+    const { vkUsers, copyPeople } = this.props;
+    let users = vkUsers.map(user => {
       return { ...user, wins: [], loses: [], count: 0 };
     });
-    this.props.copyPeople(users);
+    copyPeople(users);
   }
 
   render() {

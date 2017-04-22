@@ -6,7 +6,8 @@
 2. make cool theme
 3. opimize algorythm
 4. add publics(groups) to search and vote
-
+5. whole area of li should be link
+6. third part effect should be realized
 
 # Questions
 

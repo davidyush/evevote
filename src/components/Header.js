@@ -9,16 +9,22 @@ import header from '../styles/header_styl'
 const Header = (props) => (
   <header className={css(header.header)}>
     <div className={css(header.container)}>
-      <h1 className={css(header.logo)}>AVAVOTE</h1>
+      <h1 className={css(header.logo)}>
+        AVAVOTE
+      </h1>
       <ul className={css(header.navLinks)}>
         <li className={css(header.hoverLink, header.navLink)} onClick={props.handleLogin}>
           Login vk
         </li>
         <li className={css(header.hoverLink, header.navLink)}>
-          <Link className={css(header.linkHead)} to='/'>Home</Link>
+          <Link className={css(header.linkHead)} to='/'>
+            Home
+          </Link>
         </li>
         <li className={css(header.hoverLink, header.navLink)}>
-          <Link className={css(header.linkHead)} to='/vote'>Vote</Link>
+          <Link className={css(header.linkHead)} to='/vote'>
+            Vote
+          </Link>
         </li>
       </ul>
     </div>

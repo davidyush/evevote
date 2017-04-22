@@ -7,24 +7,14 @@ import votePerson from '../styles/votePerson_styl'
 class VotePerson extends Component {
   constructor() {
     super();
-    this.state = {
-      currentPerson: null,
-      anotherPerson: null
-    }
     this.clickHandler = this.clickHandler.bind(this);
   }
 
-  componentDidMount() {
-    const { uid, carts } = this.props;
-    this.setState({
-      currentPerson: carts.filter(person => person.uid === uid)[0],
-      anotherPerson: carts.filter(person => person.uid !== uid)[0]
-    })
-  }
-
   clickHandler() {
-    const { chooseHandlerClick, updateWinerLoser } = this.props;
-    updateWinerLoser(this.state.currentPerson, this.state.anotherPerson);
+    const { uid, carts, chooseHandlerClick, updateWinerLoser } = this.props;
+    let winer = carts.filter(person => person.uid === uid)[0];
+    let loser = carts.filter(person => person.uid !== uid)[0];
+    updateWinerLoser(winer, loser);
     chooseHandlerClick();
   }
 
@@ -32,7 +22,9 @@ class VotePerson extends Component {
     return (
       <div className={css(votePerson.container)} onClick={this.clickHandler}>
         <img className={css(votePerson.img)} alt='person' src={this.props.photo}/>
-        <h3 className={css(votePerson.name)}>{this.props.firstName} {this.props.lastName}</h3>
+        <h3 className={css(votePerson.name)}>
+          {this.props.firstName} {this.props.lastName}
+        </h3>
       </div>
     )
   }

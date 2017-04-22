@@ -9,8 +9,12 @@ const PersonCart = (props) => {
   return (
     <div className={css(person.cart)}>
       <img className={css(person.img)} alt={props.name} src={props.photo}/>
-      <h4 className={css(person.title)}>{props.name} {props.lastName}</h4>
-      <button className={css(person.btnDelete)} onClick={removeUser}>X</button>
+      <h4 className={css(person.title)}>
+        {props.name} {props.lastName}
+      </h4>
+      <button className={css(person.btnDelete)} onClick={removeUser}>
+        X
+      </button>
     </div>
   );
 }

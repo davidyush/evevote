@@ -8,9 +8,11 @@ import VotePerson from './VotePerson'
 class VoteGame extends Component {
   constructor() {
     super();
+
     this.state = {
       steps: 0
     };
+
     this.clickHandler = this.clickHandler.bind(this);
     this.chooseHandlerClick = this.chooseHandlerClick.bind(this);
   }
@@ -21,11 +23,13 @@ class VoteGame extends Component {
   }
 
   chooseHandlerClick() {
+    const { getTwoPersons, gameUsers } = this.props;
+
     this.setState({
       steps: this.state.steps + 1
     });
 
-    this.props.getTwoPersons(this.props.gameUsers, 'uid');
+    getTwoPersons(gameUsers, 'uid');
   }
 
   render() {
