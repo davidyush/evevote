@@ -30,7 +30,6 @@ function theSameCount(one, two) {
   return one.count === two.count;
 }
 
-//wrapper
 function shouldBeCompared(el1, el2, nameId) {
   return isDifferent(el1, el2, nameId) && theSameWins(el1, el2) &&
          theSameLoses(el1, el2) && theSameCount(el1, el2);
@@ -60,14 +59,14 @@ function getPair(arr) {
   return result;
 }
 
-function isSorted(arr, nameId) {
-  for(let i = 0; i < arr.length - 1; i++) {
-    if(!arr[i].wins.includes(arr[i + 1][nameId])) {
-      return false;
-    }
-  }
-  return true;
-}
+// function isSorted(arr, nameId) {
+//   for(let i = 0; i < arr.length - 1; i++) {
+//     if(!arr[i].wins.includes(arr[i + 1][nameId])) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
 
 function makeCompare(arr, nameId) {
   let result = [];
